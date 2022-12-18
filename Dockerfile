@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 
 
 #Run the application on port 8080
-CMD exec streamlit run app.py
+CMD exec streamlit --bind :$PORT --workers 1 --threads 8 --timeout 0 main:app
